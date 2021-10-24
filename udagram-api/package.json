@@ -2,9 +2,8 @@
   "name": "udagram-api",
   "version": "2.0.0",
   "description": "",
-  "main": "src/server.ts",
   "scripts": {
-    "start": "node .",
+    "start": "node server.js",
     "tsc": "tsc",
     "dev": "ts-node-dev --respawn --transpile-only ./src/server.ts",
     "prod": "tsc && node ./www/server.js",
