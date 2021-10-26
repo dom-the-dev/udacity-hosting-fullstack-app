@@ -1,15 +1,25 @@
 import AWS = require("aws-sdk");
 import { config } from "./config/config";
 
-// Configure AWS
-const credentials = new AWS.SharedIniFileCredentials({ profile: "default" });
-AWS.config.credentials = credentials;
+const AWS_ACCESS_KEY_ID = process.env.AWS_ACCESS_KEY_ID;
+const AWS_SECRET_ACCESS_KEY = process.env.AWS_SECRET_ACCESS_KEY;
+const AWS_REGION = process.env.AWS_REGION;
 
-export const s3 = new AWS.S3({
-  signatureVersion: "v4",
-  region: config.aws_region,
-  params: { Bucket: config.aws_media_bucket },
-});
+// Configure AWS
+AWS.config.update({accessKeyId: AWS_ACCESS_KEY_ID, secretAccessKey: AWS_SECRET_ACCESS_KEY});
+AWS.config.region = AWS_REGION;
+
+export const s3 = new AWS.S3();
+
+// const credentials = new AWS.SharedIniFileCredentials({ profile: "default" });
+// console.log('THE CREDENTIALS: ', credentials)
+// AWS.config.credentials = credentials;
+//
+// export const s3 = new AWS.S3({
+//   signatureVersion: "v4",
+//   region: config.aws_region,
+//   params: { Bucket: config.aws_media_bucket },
+// });
 
 // Generates an AWS signed URL for retrieving objects
 export function getGetSignedUrl(key: string): string {
