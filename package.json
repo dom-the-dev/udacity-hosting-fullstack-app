@@ -1,6 +1,7 @@
 {
   "scripts": {
-    "test": "echo \" whatever\" "
+    "test": "echo \" whatever\" ",
+    "next": "echo \" next\" "
   },
   "devDependencies": {},
   "name": "udagram",
