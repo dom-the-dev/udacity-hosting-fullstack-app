@@ -8,10 +8,10 @@ jobs:
   build:
     steps:
       - node/install
-    - run:
-        name: hello
-        command: |
-          echo "hello-world"
+      - run:
+          name: hello
+          command: |
+            echo "hello-world"
 
 workflows:
   udagram:
