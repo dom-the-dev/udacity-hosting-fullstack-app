@@ -1,7 +1,20 @@
-
 {
-    "scripts": {
-        "test": "echo \" whatever\" "
-    },
-    "devDependencies": {}
+  "scripts": {
+    "test": "echo \" whatever\" "
+  },
+  "devDependencies": {},
+  "name": "udagram",
+  "description": "http://udacity-dom.s3-website.eu-central-1.amazonaws.com/home",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dom-the-dev/udacity-hosting-fullstack-app.git"
+  },
+  "author": "Dominik Amrugiewicz",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/dom-the-dev/udacity-hosting-fullstack-app/issues"
+  },
+  "homepage": "https://github.com/dom-the-dev/udacity-hosting-fullstack-app#readme"
 }
