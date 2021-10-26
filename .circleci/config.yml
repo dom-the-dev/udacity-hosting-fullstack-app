@@ -4,16 +4,7 @@ orbs:
   node: circleci/node@4.1
   aws-s3: circleci/aws-s3@2.0
 
-jobs:
-  build:
-    steps:
-      - node/install
-      - run:
-          name: hello
-          command: |
-            echo "hello-world"
-
 workflows:
-  udagram:
+  welcome:
     jobs:
-      - build
+      - welcome/run
