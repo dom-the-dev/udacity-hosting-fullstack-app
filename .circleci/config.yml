@@ -7,6 +7,7 @@ orbs:
 jobs:
   build:
     steps:
+      - node/install
     - run:
         name: hello
         command: |
