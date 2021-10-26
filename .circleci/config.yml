@@ -27,7 +27,7 @@ jobs:
           command: npm test
       - run:
           name: Another one
-          command: npm next
+          command: npm run next
 
 workflows:
   sample:
