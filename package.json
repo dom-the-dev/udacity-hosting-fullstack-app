@@ -1,5 +1,7 @@
 
 {
-    "scripts": {},
+    "scripts": {
+        "test": "echo \" whatever\" "
+    },
     "devDependencies": {}
 }
