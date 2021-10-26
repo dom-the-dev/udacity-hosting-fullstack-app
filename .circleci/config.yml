@@ -1,0 +1,18 @@
+version: 2.1
+
+orbs:
+  node: circleci/node@4.1
+  aws-s3: circleci/aws-s3@2.0
+
+jobs:
+  build:
+    steps:
+    - run:
+        name: hello
+        command: |
+          echo "hello-world"
+
+workflows:
+  udagram:
+    jobs:
+      - build
