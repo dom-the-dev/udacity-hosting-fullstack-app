@@ -15,6 +15,8 @@ jobs:
       - node/install
       - aws-cli/setup
       - eb/setup
+          context: aws-creds
+          environment-name: Udacity-env
 #      - browser-tools/install-browser-tools
 #      - run:
 #          name: Install Frontend
