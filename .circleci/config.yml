@@ -12,7 +12,7 @@ jobs:
     steps:
       - checkout
       - node/install
-      - aws-cli/setup
+#      - aws-cli/setup
       - browser-tools/install-browser-tools
       - run:
           name: Install Frontend

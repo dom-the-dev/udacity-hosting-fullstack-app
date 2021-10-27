@@ -27,13 +27,9 @@ module.exports = function (config) {
     autoWatch: true,
     browsers: ['Chrome'],
     customLaunchers: {
-      chrome_without_security: {
+      chrome: {
         base: 'Chrome',
-        flags: [
-          '--disable-web-security',
-          '--disable-gpu',
-          '--no-sandbox'
-        ]
+        flags: ['--no-sandbox']
       },
     },
     singleRun: false
