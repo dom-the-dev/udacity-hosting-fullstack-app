@@ -12,7 +12,7 @@ jobs:
       - image: "cimg/base:stable"
     steps:
       - checkout
-      - node/install
+#      - node/install
       - aws-cli/setup
       - eb/setup
 #      - browser-tools/install-browser-tools
@@ -20,10 +20,10 @@ jobs:
 #          name: Install Frontend
 #          command: |
 #            npm run install:frontend
-      - run:
-          name: Install Backend
-          command: |
-            npm run install:backend
+#      - run:
+#          name: Install Backend
+#          command: |
+#            npm run install:backend
 #      - run:
 #          name: Build Frontend
 #          command: |
@@ -32,10 +32,10 @@ jobs:
 #          name: Test Frontend
 #          command: |
 #            npm run test:frontend
-      - run:
-          name: Build Backend
-          command: |
-            npm run build:backend
+#      - run:
+#          name: Build Backend
+#          command: |
+#            npm run build:backend
 #      - run:
 #          name: Deployment
 #          command: |
