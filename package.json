@@ -5,7 +5,7 @@
     "install:backend": "cd udagram-api && npm install",
     "build:frontend": "echo \" building frontend\" ",
     "build:backend": "echo \" building backend\" ",
-    "deploy": "echo \" deploing\" "
+    "deploy": "echo \"deploy\" "
   },
   "devDependencies": {},
   "name": "udagram",

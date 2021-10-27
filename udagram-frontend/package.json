@@ -10,7 +10,8 @@
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
-    "deploy": "aws s3 cp --recursive --acl public-read --cache-control='max-age=0, no-cache, no-store, must-revalidate' ./www s3://udacity-dom"
+    "deploy": "aws s3 cp --recursive --acl public-read --cache-control='max-age=0, no-cache, no-store, must-revalidate' ./www s3://udacity-dom",
+    "deploy-sh": "chmod +x bin/deploy.sh && bin/deploy.sh"
   },
   "private": true,
   "dependencies": {
