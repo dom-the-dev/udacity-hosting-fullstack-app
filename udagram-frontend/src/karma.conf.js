@@ -27,13 +27,14 @@ module.exports = function (config) {
     autoWatch: true,
     browsers: ['Chrome'],
     customLaunchers: {
-      Chrome: {
+      chrome_without_security: {
+        base: 'Chrome',
         flags: [
           '--disable-web-security',
           '--disable-gpu',
           '--no-sandbox'
         ]
-      }
+      },
     },
     singleRun: false
   });
