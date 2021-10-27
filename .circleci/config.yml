@@ -32,3 +32,10 @@ jobs:
           name: Deploy
           command: |
             npm run deploy
+
+
+
+
+workflows:
+    jobs:
+      - build
