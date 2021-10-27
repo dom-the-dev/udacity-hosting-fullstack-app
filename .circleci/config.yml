@@ -145,16 +145,12 @@ jobs:
         description: The description for the application version, enclosed in double quotation marks.
         type: string
       environment-name:
-        default: ""
+        default: "Udacity-env"
         description: The name of the existing environment (created with `eb create`) to update.
         type: string
       image:
         default: cimg/base:stable
         description: Enter a custom docker image for this job. By default CircleCI's optimized `cimg/base` image will be used.
-        type: string
-      label:
-        default: ""
-        description: Specify a label to use for the version that the EB CLI creates. If the label has already been used, the EB CLI redeploys the previous version with that label.
         type: string
       platform-version:
         default: node.js
@@ -165,9 +161,7 @@ jobs:
       - setup
       - run:
           command: |
-             eb list
-#            eb init <<parameters.application-name>> -r $AWS_DEFAULT_REGION -p <<parameters.platform-version>>
-#            eb deploy <<parameters.environment-name>> <<#parameters.label>>-l <<parameters.label>><</parameters.label>> <<#parameters.description>>-m <<parameters.description>><</parameters.description>>
+             eb deploy Udacity-env <<#parameters.label>>-l <<parameters.label>><</parameters.label>> <<#parameters.description>>-m <<parameters.description>><</parameters.description>>
           name: EB Deploy
           working_directory: <<parameters.app-dir>>
 
