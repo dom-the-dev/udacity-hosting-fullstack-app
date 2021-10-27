@@ -133,7 +133,7 @@ jobs:
       - image: <<parameters.image>>
     parameters:
       app-dir:
-        default: ./udagram-api/www
+        default: ./udagram-api
         description: Path to the directory containing your application source code. My default, the current directory will be used.
         type: string
       application-name:
@@ -165,7 +165,7 @@ jobs:
       - setup
       - run:
           command: |
-             eb deploy Udacity-env <<#parameters.label>>-l <<parameters.label>><</parameters.label>> <<#parameters.description>>-m <<parameters.description>><</parameters.description>>
+             eb deploy Udacity-env
           name: EB Deploy
           working_directory: <<parameters.app-dir>>
 
