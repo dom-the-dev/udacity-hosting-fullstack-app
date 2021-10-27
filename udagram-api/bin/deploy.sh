@@ -1,2 +1,2 @@
-eb list
-#eb deploy Udacity-env
+#!/usr/bin/env bash
+eb deploy Udacity-env

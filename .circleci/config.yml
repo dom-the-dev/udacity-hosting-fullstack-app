@@ -40,10 +40,18 @@ jobs:
 #          name: Deployment
 #          command: |
 #            npm run deploy:frontend
-      - run:
-          name: Deployment
-          command: |
-            npm run deploy:backend
+#      - run:
+#          name: Deployment
+#          command: |
+#            npm run deploy:backend
+      - eb/deploy:
+          context: aws-creds
+          environment-name: Udacity-env
+          filters:
+            branches:
+              only:
+                - main
+          label: version-<<pipeline.number>>
 
 
 
