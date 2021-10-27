@@ -3,8 +3,8 @@
     "test": "echo \" whatever\" ",
     "install:frontend": "cd udagram-frontend && npm install",
     "install:backend": "cd udagram-api && npm install",
-    "build:frontend": "echo \" building frontend\" ",
-    "build:backend": "echo \" building backend\" ",
+    "build:frontend": "cd udagram-frontend && npm run build",
+    "build:backend": "cd udagram-api && npm run build",
     "deploy": "echo \"deploy\" "
   },
   "devDependencies": {},
