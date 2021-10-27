@@ -18,4 +18,4 @@ global:
   sc: null
   workspace_type: Application
 deploy:
-  artifact: ./www/Archive.zip
+  artifact: ./Archive.zip
