@@ -1,10 +1,11 @@
 {
   "scripts": {
     "test": "echo \" whatever\" ",
+    "install:frontend": "echo \" installing frontend\" ",
+    "install:backend": "echo \" installing backend\" ",
     "build:frontend": "echo \" building frontend\" ",
     "build:backend": "echo \" building backend\" ",
-    "deploy:frontend": "echo \" deploy frontend\" ",
-    "deploy:backend": "echo \" deploy backend\" "
+    "deploy": "echo \" deploing\" "
   },
   "devDependencies": {},
   "name": "udagram",

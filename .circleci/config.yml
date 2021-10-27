@@ -5,33 +5,41 @@ orbs:
   aws-s3: circleci/aws-s3@2.0
 
 jobs:
-  build-frontend:
+  build:
     docker:
       - image: cimg/node:16.10
     steps:
       - checkout
-      - node/install-packages:
-          pkg-manager: npm
+      - node/install
+      - aws-cli/setup
       - run:
-          name: Build frontnend
-          command: npm run build:frontend
-
-  deploy-frontend:
-    docker:
-      - image: cimg/node:16.10
-    steps:
-      - checkout
-      - node/install-packages:
-          pkg-manager: npm
+          name: Install Frontend
+          command: |
+            npm run install:frontend
       - run:
-          name: Deploy frontnend
-          command: npm run deploy:frontend
+          name: Install Backend
+          command: |
+            npm run install:backend
+      - run:
+          name: Build Frontend
+          command: |
+            npm run build:frontend
+      - run:
+          name: Build Backend
+          command: |
+            npm run build:backend
+      - run:
+          name: Deploy
+          command: |
+            npm run deploy
 
 
-#workflows:
-#  sample:
-#    jobs:
-#      - build-frontend
-#      - build-backend
-#      - deploy-frontend
-#      - deploy-backend
+
+
+workflows:
+  sample:
+    jobs:
+      - build-frontend
+      - build-backend
+      - deploy-frontend
+      - deploy-backend
