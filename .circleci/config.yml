@@ -177,3 +177,10 @@ workflows:
     jobs:
       - build
       - deploy
+          context: aws-creds
+            environment-name: my-app
+            filters:
+              branches:
+                only:
+                  - main
+            label: version-<<pipeline.number>>
