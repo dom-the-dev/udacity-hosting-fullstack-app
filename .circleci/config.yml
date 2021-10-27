@@ -32,14 +32,3 @@ jobs:
           name: Deploy
           command: |
             npm run deploy
-
-
-
-
-workflows:
-  sample:
-    jobs:
-      - build-frontend
-      - build-backend
-      - deploy-frontend
-      - deploy-backend
