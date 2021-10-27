@@ -27,10 +27,10 @@ module.exports = function (config) {
     autoWatch: true,
     browsers: ['Chrome'],
     customLaunchers: {
-      chrome: {
+      Chrome_without_security: {
         base: 'Chrome',
-        flags: ['--no-sandbox']
-      },
+        flags: ['--disable-web-security', '--disable-site-isolation-trials']
+      }
     },
     singleRun: false
   });
