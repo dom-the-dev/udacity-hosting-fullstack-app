@@ -44,7 +44,45 @@ jobs:
 #          name: Deployment
 #          command: |
 #            npm run deploy:backend
-
+  deploy:
+    description: |
+      Deploy an update to an existing AWS Elastic Beanstalk environment.
+    docker:
+      - image: <<parameters.image>>
+    parameters:
+      app-dir:
+        default: ./udagram-api
+        description: Path to the directory containing your application source code. My default, the current directory will be used.
+        type: string
+      application-name:
+        default: "udacity"
+        description: The name of the application (used during `eb init`).
+        type: string
+      environment-name:
+        default: "Udacity-env"
+        description: The name of the existing environment (created with `eb create`) to update.
+        type: string
+      image:
+        default: cimg/base:stable
+        description: Enter a custom docker image for this job. By default CircleCI's optimized `cimg/base` image will be used.
+        type: string
+      label:
+        default: ""
+        description: Specify a label to use for the version that the EB CLI creates. If the label has already been used, the EB CLI redeploys the previous version with that label.
+        type: string
+      platform-version:
+        default: node.js
+        description: The platform version to use. You can specify a platform, a platform and version, a platform branch, a solution stack name, or a solution stack ARN. Use 'eb platform list' to get a list of available configurations.
+        type: string
+    steps:
+      - checkout
+      - setup
+      - run:
+          command: |
+            eb init <<parameters.application-name>> -r $AWS_DEFAULT_REGION -p <<parameters.platform-version>>
+            eb deploy <<parameters.environment-name>> <<#parameters.label>>-l <<parameters.label>><</parameters.label>> <<#parameters.description>>-m <<parameters.description>><</parameters.description>>
+          name: EB Deploy
+          working_directory: <<parameters.app-dir>>
 
 
 
@@ -52,11 +90,3 @@ workflows:
   workflow:
     jobs:
       - build
-      - eb/deploy
-        context: aws-creds
-        environment-name: Udacity-env
-        filters:
-          branches:
-            only:
-              - main
-        label: version-<<pipeline.number>>
