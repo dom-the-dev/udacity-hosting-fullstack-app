@@ -7,7 +7,11 @@
     "build:backend": "cd udagram-api && npm run build",
     "deploy": "echo \"deploy\" "
   },
-  "devDependencies": {},
+  "devDependencies": {
+    "@angular/cli": "~8.3.25",
+    "@angular/compiler": "~8.2.14",
+    "@angular/compiler-cli": "~8.2.14"
+  },
   "name": "udagram",
   "description": "http://udacity-dom.s3-website.eu-central-1.amazonaws.com/",
   "version": "1.0.0",
