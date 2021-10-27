@@ -3,6 +3,7 @@
     "test": "echo \" whatever\" ",
     "install:frontend": "cd udagram-frontend && npm install",
     "install:backend": "cd udagram-api && npm install",
+    "test:frontend": "export NODE_OPTIONS=--openssl-legacy-provider && cd udagram-frontend && npm test",
     "build:frontend": "export NODE_OPTIONS=--openssl-legacy-provider && cd udagram-frontend && npm run build",
     "build:backend": "cd udagram-api && npm run build",
     "deploy": "cd udagram-frontend && npm run deploy-sh"
