@@ -37,5 +37,6 @@ jobs:
 
 
 workflows:
+  amru:
     jobs:
       - build
