@@ -122,10 +122,6 @@ jobs:
           name: Deployment
           command: |
             npm run deploy:frontend
-      - run:
-          name: Deployment
-          command: |
-            npm run deploy:backend
   deploy:
     description: |
       Deploy an update to an existing AWS Elastic Beanstalk environment.
