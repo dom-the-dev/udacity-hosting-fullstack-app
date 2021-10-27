@@ -1,8 +1,8 @@
 {
   "scripts": {
     "test": "echo \" whatever\" ",
-    "install:frontend": "echo \" installing frontend\" ",
-    "install:backend": "echo \" installing backend\" ",
+    "install:frontend": "cd udagram-frontend && npm install",
+    "install:backend": "cd udagram-api && npm install",
     "build:frontend": "echo \" building frontend\" ",
     "build:backend": "echo \" building backend\" ",
     "deploy": "echo \" deploing\" "
