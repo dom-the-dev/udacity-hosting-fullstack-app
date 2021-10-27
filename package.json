@@ -1,13 +1,15 @@
 {
   "scripts": {
     "test": "echo \" whatever\" ",
-    "next": "echo \" next\" "
+    "build:frontend": "echo \" building frontend\" ",
+    "build:backend": "echo \" building backend\" ",
+    "deploy:frontend": "echo \" deploy frontend\" ",
+    "deploy:backend": "echo \" deploy backend\" "
   },
   "devDependencies": {},
   "name": "udagram",
-  "description": "http://udacity-dom.s3-website.eu-central-1.amazonaws.com/home",
+  "description": "http://udacity-dom.s3-website.eu-central-1.amazonaws.com/",
   "version": "1.0.0",
-  "main": "index.js",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/dom-the-dev/udacity-hosting-fullstack-app.git"
