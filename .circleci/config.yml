@@ -165,7 +165,6 @@ jobs:
       - setup
       - run:
           command: |
-            eb init <<parameters.application-name>> -r $AWS_DEFAULT_REGION -p <<parameters.platform-version>>
             eb deploy <<parameters.environment-name>> <<#parameters.label>>-l <<parameters.label>><</parameters.label>> <<#parameters.description>>-m <<parameters.description>><</parameters.description>>
           name: EB Deploy
           working_directory: <<parameters.app-dir>>
@@ -177,10 +176,3 @@ workflows:
     jobs:
       - build
       - deploy
-          context: aws-creds
-            environment-name: my-app
-            filters:
-              branches:
-                only:
-                  - main
-            label: version-<<pipeline.number>>
