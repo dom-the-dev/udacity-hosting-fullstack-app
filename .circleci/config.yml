@@ -18,26 +18,26 @@ jobs:
           name: Install Frontend
           command: |
             npm run install:frontend
-      - run:
-          name: Install Backend
-          command: |
-            npm run install:backend
-      - run:
-          name: Build Frontend
-          command: |
-            npm run build:frontend
+#      - run:
+#          name: Install Backend
+#          command: |
+#            npm run install:backend
+#      - run:
+#          name: Build Frontend
+#          command: |
+#            npm run build:frontend
       - run:
           name: Test Frontend
           command: |
             npm run test:frontend
-      - run:
-          name: Build Backend
-          command: |
-            npm run build:backend
-      - run:
-          name: Deploy
-          command: |
-            npm run deploy
+#      - run:
+#          name: Build Backend
+#          command: |
+#            npm run build:backend
+#      - run:
+#          name: Deploy
+#          command: |
+#            npm run deploy
 
 
 
