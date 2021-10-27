@@ -141,7 +141,7 @@ jobs:
         description: The name of the application (used during `eb init`).
         type: string
       description:
-        default: "Udacity-env"
+        default: ""
         description: The description for the application version, enclosed in double quotation marks.
         type: string
       environment-name:
