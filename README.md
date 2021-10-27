@@ -1,6 +1,8 @@
-# Udagram
+# Hosting a Full-Stack Application
+### Project #4 - Full Stack JavaScript Developer Nanodegree
 
-http://udacity-dom.s3-website.eu-central-1.amazonaws.com/
+[Open app](http://udacity-dom.s3-website.eu-central-1.amazonaws.com/)
+
 
 This application is provided to you as an alternative starter project if you do not wish to host your own code done in the previous courses of this nanodegree. The udagram application is a fairly simple application that includes all the major components of a Full-Stack web application.
 
@@ -49,12 +51,8 @@ This project contains two different test suite: unit tests and End-To-End tests(
 There are no Unit test on the back-end
 
 ### Unit Tests:
-
 Unit tests are using the Jasmine Framework.
 
-### End to End Tests:
-
-The e2e tests are using Protractor and Jasmine.
 
 ## Built With
 
@@ -62,6 +60,3 @@ The e2e tests are using Protractor and Jasmine.
 - [Node](https://nodejs.org) - Javascript Runtime
 - [Express](https://expressjs.com/) - Javascript API Framework
 
-## License
-
-[License](LICENSE.txt)
