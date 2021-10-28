@@ -3,8 +3,10 @@
 
 [Open app](http://udacity-dom.s3-website.eu-central-1.amazonaws.com/)
 
-
 This application is provided to you as an alternative starter project if you do not wish to host your own code done in the previous courses of this nanodegree. The udagram application is a fairly simple application that includes all the major components of a Full-Stack web application.
+
+## Documentation
+For more detailed information about the applications architecture and the deployment pipeline read the [Documentation](./documentation/Documentation.md).
 
 ## Getting Started
 
