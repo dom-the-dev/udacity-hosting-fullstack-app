@@ -5,16 +5,16 @@
 This application is hosted on three services of the AWS Cloud. It uses S3 Buckets as for file storage, an elastic beanstalk application as a server and RDS for data storage.
 In the frontend the user can interact through an angular application.
 
-![architecture diagram](architecture_diagram.jpeg)
+![architecture diagram](images/architecture_diagram.jpeg)
 
 ### S3 Bucket
-![architecture diagram](../screenshots/s3_bucket.png)
+![architecture diagram](images/s3_bucket.png)
 
 ### Elastic Beanstalk
-![architecture diagram](../screenshots/elastic_beanstalk.png)
+![architecture diagram](images/elastic_beanstalk.png)
 
 ### RDS PostgreSQL
-![architecture diagram](../screenshots/rds.png)
+![architecture diagram](images/rds.png)
 
 ## Pipeline process
 
@@ -25,11 +25,13 @@ When the user pushes a commit to the Git-Repository, the pipeline is triggered.
 The pipeline process is structured in workflows, jobs and steps by the [config file](../.circleci/config.yml).
 Through environment-variables, circleCi is allowed to fulfill the deployment process on the aws cloud services. 
 
+![pipeline_diagram](images/circleci.jpeg)
+
 #### Successfull Deployment
-![architecture diagram](../screenshots/circleci_deployment.png)
+![deployment](images/circleci_deployment.png)
 
 #### CircleCi Environment
-![architecture diagram](../screenshots/circleci_env.png)
+![circleci_env](images/circleci_env.png)
 
 ## Dependencies
 - Node
